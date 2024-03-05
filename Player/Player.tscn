@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dth07sghkkjip"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_087ty"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rs73"]
+albedo_color = Color(0.462745, 0.462745, 0.462745, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bpcre"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_x3nqx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_opomw"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_snxqx"]
+
+[node name="Node3D" type="CharacterBody3D"]
+script = ExtResource("1_087ty")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
+material_override = SubResource("StandardMaterial3D_5rs73")
+mesh = SubResource("CapsuleMesh_bpcre")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot/MeshInstance3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.202985, 0.570926, -0.422909)
+mesh = SubResource("SphereMesh_x3nqx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_opomw")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pivot/MeshInstance3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.203, 0.571, -0.423)
+mesh = SubResource("SphereMesh_x3nqx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_opomw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_snxqx")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-3.94991e-08, -0.428304, 0.903635, -1.87218e-08, 0.903635, 0.428304, -1, 1.77636e-15, -4.37114e-08, 6.05543, 4.75877, 0)
