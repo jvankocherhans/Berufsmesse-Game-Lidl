@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqso28a7tndor"]
+
+[ext_resource type="Script" path="res://SceneSwitcher.gd" id="1_cbxna"]
+[ext_resource type="FontFile" uid="uid://ufixl0nbut0n" path="res://_ressources/Fonts/LidlFontPro-Regular.ttf" id="2_l1d7c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cy2ut"]
+bg_color = Color(0, 0.313726, 0.666667, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4je1g"]
+font = ExtResource("2_l1d7c")
+font_size = 45
+
+[node name="SceneSwitcher" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cbxna")
+
+[node name="Registration" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cy2ut")
+
+[node name="Label" type="Label" parent="Registration"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.385
+anchor_right = 0.5
+anchor_bottom = 0.439
+offset_left = -221.5
+offset_top = 0.199982
+offset_right = 221.5
+offset_bottom = -0.120026
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lidl Berufsmessegame"
+label_settings = SubResource("LabelSettings_4je1g")
+horizontal_alignment = 1
+
+[node name="InputPlayerID" type="LineEdit" parent="Registration"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.5
+offset_top = -20.5
+offset_right = 189.5
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="text_submitted" from="Registration/InputPlayerID" to="." method="_on_line_edit_text_submitted"]
