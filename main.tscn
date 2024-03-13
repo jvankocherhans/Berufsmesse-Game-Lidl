@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bia8jim3s31r5"]
+[gd_scene load_steps=8 format=3 uid="uid://bia8jim3s31r5"]
 
 [ext_resource type="PackedScene" uid="uid://dth07sghkkjip" path="res://Player/Player.tscn" id="1_bnc7s"]
+[ext_resource type="PackedScene" uid="uid://cqso28a7tndor" path="res://SceneSwitcher/SceneSwitcher.tscn" id="2_816bh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jxm7b"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -42,3 +43,5 @@ shape = SubResource("BoxShape3D_kfov7")
 
 [node name="Node3D" parent="." instance=ExtResource("1_bnc7s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317093, 3.53665, 0.477521)
+
+[node name="SceneSwitcher" parent="." instance=ExtResource("2_816bh")]
