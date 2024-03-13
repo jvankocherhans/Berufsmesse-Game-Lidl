@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dth07sghkkjip"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_087ty"]
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_nfvlj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rs73"]
 albedo_color = Color(0.462745, 0.462745, 0.462745, 1)
@@ -15,7 +15,7 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_snxqx"]
 
 [node name="Node3D" type="CharacterBody3D"]
-script = ExtResource("1_087ty")
+script = ExtResource("1_nfvlj")
 
 [node name="Pivot" type="Node3D" parent="."]
 

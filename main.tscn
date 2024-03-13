@@ -41,4 +41,4 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 shape = SubResource("BoxShape3D_kfov7")
 
 [node name="Node3D" parent="." instance=ExtResource("1_bnc7s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62184, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317093, 3.53665, 0.477521)
