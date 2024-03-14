@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://biw1xe2oklb5c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ffubk"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_hs4jh"]
+material = SubResource("ShaderMaterial_ffubk")
+
+[node name="HUD" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(125.75, 47.75)
+scale = Vector2(252.5, 96.5)
+mesh = SubResource("QuadMesh_hs4jh")

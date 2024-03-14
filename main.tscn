@@ -1,18 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://bia8jim3s31r5"]
+[gd_scene load_steps=9 format=3 uid="uid://bia8jim3s31r5"]
 
 [ext_resource type="PackedScene" uid="uid://dth07sghkkjip" path="res://Player/Player.tscn" id="1_bnc7s"]
 [ext_resource type="PackedScene" uid="uid://cqso28a7tndor" path="res://SceneSwitcher/SceneSwitcher.tscn" id="2_816bh"]
+[ext_resource type="PackedScene" uid="uid://biw1xe2oklb5c" path="res://HUD/HUD.tscn" id="3_ufv5l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jxm7b"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_7jdhn"]
+[sub_resource type="Sky" id="Sky_8cwy0"]
 sky_material = SubResource("ProceduralSkyMaterial_jxm7b")
 
 [sub_resource type="Environment" id="Environment_8lye7"]
 background_mode = 2
-sky = SubResource("Sky_7jdhn")
+sky = SubResource("Sky_8cwy0")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -45,3 +46,7 @@ shape = SubResource("BoxShape3D_kfov7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317093, 3.53665, 0.477521)
 
 [node name="SceneSwitcher" parent="." instance=ExtResource("2_816bh")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("3_ufv5l")]

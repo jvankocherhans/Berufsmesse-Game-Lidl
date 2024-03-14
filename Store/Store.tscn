@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://dv0oblx0e13hd"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ymxly"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_7jdhn"]
+sky_material = SubResource("ProceduralSkyMaterial_ymxly")
+
+[sub_resource type="Environment" id="Environment_p18tr"]
+background_mode = 2
+sky = SubResource("Sky_7jdhn")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_orkor"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ycbmf"]
+size = Vector3(5.90328, 0.001, 4.99998)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u8tgp"]
+
+[node name="Store" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p18tr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+freeze = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_orkor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.038507, 0, 0.0210366)
+shape = SubResource("BoxShape3D_ycbmf")
+
+[node name="FleischFisch3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-0.5, 0, -3.49691e-07, 0, 0.5, 0, 4.37114e-08, 0, -4, 4, 0.3, 0.1)
+mesh = SubResource("BoxMesh_u8tgp")
+
+[node name="BakeOff3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-2.18557e-08, 0, 2, 0, 0.5, 0, -0.5, 0, -8.74228e-08, -1.5, 0.3, 3.5)
+mesh = SubResource("BoxMesh_u8tgp")
+
+[node name="Kaltgetränke3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-2.18557e-08, 0, 2, 0, 0.5, 0, -0.5, 0, -8.74228e-08, 1.5, 0.3, 3.5)
+mesh = SubResource("BoxMesh_u8tgp")
+
+[node name="ObstGemüse3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-2.18557e-08, 0, 2, 0, 0.5, 0, -0.5, 0, -8.74228e-08, -1.5, 0.3, 1.5)
+mesh = SubResource("BoxMesh_u8tgp")
+
+[node name="Haushaltgegenstaende3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-2.18557e-08, 0, 2, 0, 0.5, 0, -0.5, 0, -8.74228e-08, -1.5, 0.3, -0.5)
+mesh = SubResource("BoxMesh_u8tgp")
+
+[node name="Gefrierwaren3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-2.18557e-08, 0, 2, 0, 0.5, 0, -0.5, 0, -8.74228e-08, -1.5, 0.3, -2.5)
+mesh = SubResource("BoxMesh_u8tgp")
+
+[node name="Milchwaren3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-2.18557e-08, 0, 2, 0, 0.5, 0, -0.5, 0, -8.74228e-08, 1.5, 0.3, -2.5)
+mesh = SubResource("BoxMesh_u8tgp")
+
+[node name="NonFood3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-2.18557e-08, 0, 1.5, 0, 0.5, 0, -0.5, 0, -6.55671e-08, 1.5, 0.3, -0.5)
+mesh = SubResource("BoxMesh_u8tgp")
+
+[node name="Suesswaren3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-2.18557e-08, 0, 1.5, 0, 0.5, 0, -0.5, 0, -6.55671e-08, 1.5, 0.3, 1.5)
+mesh = SubResource("BoxMesh_u8tgp")
