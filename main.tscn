@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bia8jim3s31r5"]
+[gd_scene load_steps=11 format=3 uid="uid://bia8jim3s31r5"]
 
-[ext_resource type="PackedScene" uid="uid://dth07sghkkjip" path="res://Player/Player.tscn" id="1_bnc7s"]
 [ext_resource type="PackedScene" uid="uid://cqso28a7tndor" path="res://SceneSwitcher/SceneSwitcher.tscn" id="2_816bh"]
 [ext_resource type="PackedScene" uid="uid://biw1xe2oklb5c" path="res://HUD/HUD.tscn" id="3_ufv5l"]
+[ext_resource type="PackedScene" uid="uid://dv0oblx0e13hd" path="res://Store/Store.tscn" id="4_y4eff"]
+[ext_resource type="PackedScene" uid="uid://3b2tguesr0bs" path="res://Player/Player_NEW.tscn" id="5_vuuxh"]
+[ext_resource type="PackedScene" uid="uid://dae4x7ukmsw0j" path="res://_TESTING/score coin/coin.tscn" id="5_y0gie"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jxm7b"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -42,11 +44,20 @@ mesh = SubResource("PlaneMesh_xal3q")
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 shape = SubResource("BoxShape3D_kfov7")
 
-[node name="Node3D" parent="." instance=ExtResource("1_bnc7s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317093, 3.53665, 0.477521)
-
 [node name="SceneSwitcher" parent="." instance=ExtResource("2_816bh")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("3_ufv5l")]
+
+[node name="Store" parent="." instance=ExtResource("4_y4eff")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.157773, 0.00249982, -0.279225)
+
+[node name="Player" parent="." instance=ExtResource("5_vuuxh")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0.202389, 0.00499994, -0.664922)
+
+[node name="coin" parent="." instance=ExtResource("5_y0gie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+
+[node name="coin2" parent="." instance=ExtResource("5_y0gie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
