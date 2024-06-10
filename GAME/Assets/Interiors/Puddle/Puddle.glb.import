@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://5p7on0idlb0q"
-path="res://.godot/imported/coin.glb-e307d569987ba46b324bdb3d830ce0dc.scn"
+uid="uid://c8rsc626jku3v"
+path="res://.godot/imported/Puddle.glb-362f429018808e4c24ef0046b4923459.scn"
 
 [deps]
 
-source_file="res://_TESTING/score coin/coin.glb"
-dest_files=["res://.godot/imported/coin.glb-e307d569987ba46b324bdb3d830ce0dc.scn"]
+source_file="res://Assets/Interiors/Puddle/Puddle.glb"
+dest_files=["res://.godot/imported/Puddle.glb-362f429018808e4c24ef0046b4923459.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dxogdvl2xvo6k"
-path="res://.godot/imported/charakter animations.glb-700a39370d8922e9890212c31cc9850d.scn"
+uid="uid://btneihavf2mgc"
+path="res://.godot/imported/car2.glb-435c004d1d5a909d96ae597a2edb1b79.scn"
 
 [deps]
 
-source_file="res://_TESTING/charakter animations.glb"
-dest_files=["res://.godot/imported/charakter animations.glb-700a39370d8922e9890212c31cc9850d.scn"]
+source_file="res://_ressources/Models/Cars/origin/car2.glb"
+dest_files=["res://.godot/imported/car2.glb-435c004d1d5a909d96ae597a2edb1b79.scn"]
 
 [params]
 

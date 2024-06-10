@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqso28a7tndor"]
 
-[ext_resource type="Script" path="res://SceneSwitcher.gd" id="1_cbxna"]
-[ext_resource type="FontFile" uid="uid://ufixl0nbut0n" path="res://_ressources/Fonts/LidlFontPro-Regular.ttf" id="2_l1d7c"]
+[ext_resource type="Script" path="res://SceneSwitcher.gd" id="1_ak5ou"]
+[ext_resource type="FontFile" uid="uid://ufixl0nbut0n" path="res://_ressources/Fonts/LidlFontPro-Regular.ttf" id="2_u0hxk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cy2ut"]
 bg_color = Color(0, 0.313726, 0.666667, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4je1g"]
-font = ExtResource("2_l1d7c")
+font = ExtResource("2_u0hxk")
 font_size = 45
 
 [node name="SceneSwitcher" type="Control"]
@@ -17,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cbxna")
+script = ExtResource("1_ak5ou")
 
 [node name="Registration" type="Panel" parent="."]
 layout_mode = 1
