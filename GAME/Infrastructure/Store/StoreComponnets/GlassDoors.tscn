@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlpc0d1sqghg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0afj7"]
+albedo_color = Color(0.866667, 0.945098, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkon5"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="GlassDoors" type="Node3D"]
+
+[node name="GlassDoorRight" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.125)
+transparency = 0.43
+size = Vector3(0.1, 2.944, 2.25)
+material = SubResource("StandardMaterial3D_0afj7")
+
+[node name="GlassDoorLeft" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.11198)
+transparency = 0.43
+size = Vector3(0.1, 2.944, 2.25)
+material = SubResource("StandardMaterial3D_0afj7")
+
+[node name="DoorKnobRight" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.303477, -0.125)
+material_override = SubResource("StandardMaterial3D_vkon5")
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="DoorKnobLeft" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.303, 0.125)
+material_override = SubResource("StandardMaterial3D_vkon5")
+size = Vector3(0.1, 0.1, 0.1)

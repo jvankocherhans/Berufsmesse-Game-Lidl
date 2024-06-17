@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://by7pn7ha5w0x8"]
+[gd_scene load_steps=20 format=3 uid="uid://by7pn7ha5w0x8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i63ke"]
 resource_name = "building_grey.004"
@@ -145,6 +145,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4ymq0")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sigs7"]
+albedo_color = Color(0, 0.690196, 0.0862745, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vjtg"]
 resource_name = "tree_green.002"
 cull_mode = 2
@@ -251,6 +254,7 @@ mesh = SubResource("ArrayMesh_djjy4")
 skeleton = NodePath("")
 
 [node name="Object_8" type="MeshInstance3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/parking_0"]
+material_override = SubResource("StandardMaterial3D_sigs7")
 mesh = SubResource("ArrayMesh_pivom")
 skeleton = NodePath("")
 

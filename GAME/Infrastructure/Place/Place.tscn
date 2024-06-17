@@ -8,6 +8,7 @@
 [node name="Place" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
 size = Vector3(100, 0, 150)
 
 [node name="FrontParking" parent="." instance=ExtResource("2_l5wc6")]
@@ -89,7 +90,7 @@ transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 
 color = Color(0.764706, 0.705882, 0, 1)
 
 [node name="car18" parent="CarCollection" instance=ExtResource("4_0gknh")]
-transform = Transform3D(-2.62268e-10, 0, 0.006, 0, 0.006, 0, -0.006, 0, -2.62268e-10, 4.1543, 0.009, -2.6698)
+transform = Transform3D(-2.62268e-10, 0, 0.006, 0, 0.006, 0, -0.006, 0, -2.62268e-10, 3.34082, 0.009, -2.6698)
 body_color = Color(0.0705882, 0.615686, 0.298039, 1)
 stripe_color = Color(0, 0, 0, 1)
 
@@ -103,4 +104,99 @@ color = Color(0.764706, 0.705882, 0, 1)
 
 [node name="car21" parent="CarCollection" instance=ExtResource("3_6ocxe")]
 transform = Transform3D(-0.019, 0, -1.66103e-09, 0, 0.019, 0, 1.66103e-09, 0, -0.019, -3.13463, 0.6, 3.87649)
+color = Color(0.898039, 0.137255, 0.0588235, 1)
+
+[node name="FrontParking2" parent="." instance=ExtResource("2_l5wc6")]
+transform = Transform3D(-2.8, 0, -2.44784e-07, 0, 2.8, 0, 2.44784e-07, 0, -2.8, 33.443, 0.01, 0)
+
+[node name="CarCollection2" type="Node" parent="."]
+
+[node name="car1" parent="CarCollection2" instance=ExtResource("3_6ocxe")]
+transform = Transform3D(0.019, 0, 0, 0, 0.019, 0, 0, 0, 0.019, 36.0411, 0.6, 0.65)
+color = Color(0.0784314, 0.588235, 0.407843, 1)
+
+[node name="car2" parent="CarCollection2" instance=ExtResource("3_6ocxe")]
+transform = Transform3D(0.019, 0, 0, 0, 0.019, 0, 0, 0, 0.019, 46.2031, 0.6, 1.734)
+color = Color(0.898039, 0.137255, 0.0588235, 1)
+
+[node name="car3" parent="CarCollection2" instance=ExtResource("3_6ocxe")]
+transform = Transform3D(0.019, 0, 0, 0, 0.019, 0, 0, 0, 0.019, 20.8441, 0.6, -8.43777)
+color = Color(1, 0.321569, 0, 1)
+
+[node name="car4" parent="CarCollection2" instance=ExtResource("3_6ocxe")]
+transform = Transform3D(-0.019, 0, -2.86892e-09, 0, 0.019, 0, 2.86892e-09, 0, -0.019, 30.7119, 0.6, -9.55062)
+color = Color(0.0784314, 0.588235, 0.407843, 1)
+
+[node name="car5" parent="CarCollection2" instance=ExtResource("3_6ocxe")]
+transform = Transform3D(-8.30516e-10, 0, 0.019, 0, 0.019, 0, -0.019, 0, -8.30516e-10, 30.0063, 0.6, 14.4097)
+color = Color(0.898039, 0.137255, 0.0588235, 1)
+
+[node name="car6" parent="CarCollection2" instance=ExtResource("3_6ocxe")]
+transform = Transform3D(-8.30516e-10, 0, 0.019, 0, 0.019, 0, -0.019, 0, -8.30516e-10, 36.987, 0.6, 14.4097)
+color = Color(0.898039, 0.137255, 0.0588235, 1)
+
+[node name="car7" parent="CarCollection2" instance=ExtResource("4_0gknh")]
+transform = Transform3D(-2.62268e-10, 0, 0.006, 0, 0.006, 0, -0.006, 0, -2.62268e-10, 45.5471, 0.009, -11.881)
+body_color = Color(1, 1, 1, 1)
+stripe_color = Color(0, 0, 0, 1)
+
+[node name="car8" parent="CarCollection2" instance=ExtResource("4_0gknh")]
+transform = Transform3D(-2.62268e-10, 0, 0.006, 0, 0.006, 0, -0.006, 0, -2.62268e-10, 21.5359, 0.009, 5.03139)
+body_color = Color(0.247059, 0.647059, 0.835294, 1)
+stripe_color = Color(1, 1, 1, 1)
+
+[node name="car9" parent="CarCollection2" instance=ExtResource("4_0gknh")]
+transform = Transform3D(0.006, 0, 0, 0, 0.006, 0, 0, 0, 0.006, 43.8207, 0.009, 13.6026)
+body_color = Color(0.0705882, 0.615686, 0.298039, 1)
+stripe_color = Color(0, 0, 0, 1)
+
+[node name="car10" parent="CarCollection2" instance=ExtResource("4_0gknh")]
+transform = Transform3D(-2.62268e-10, 0, 0.006, 0, 0.006, 0, -0.006, 0, -2.62268e-10, 21.5359, 0.009, 5.03139)
+body_color = Color(0.247059, 0.647059, 0.835294, 1)
+stripe_color = Color(1, 1, 1, 1)
+
+[node name="car11" parent="CarCollection2" instance=ExtResource("4_0gknh")]
+transform = Transform3D(-2.62268e-10, 0, -0.006, 0, 0.006, 0, 0.006, 0, -2.62268e-10, 29.8951, 0.009, -6.35007)
+body_color = Color(0.247059, 0.647059, 0.835294, 1)
+stripe_color = Color(1, 1, 1, 1)
+
+[node name="car12" parent="CarCollection2" instance=ExtResource("5_03uub")]
+transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 30.1043, 1.3, -2.86728)
+color = Color(0.909804, 0.0666667, 0.0392157, 1)
+
+[node name="car13" parent="CarCollection2" instance=ExtResource("5_03uub")]
+transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 36.9486, 1.3, -9.61097)
+color = Color(0.764706, 0.705882, 0, 1)
+
+[node name="car14" parent="CarCollection2" instance=ExtResource("5_03uub")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 23.1005, 1.3, 14.0298)
+color = Color(0.764706, 0.705882, 0, 1)
+
+[node name="car15" parent="CarCollection2" instance=ExtResource("5_03uub")]
+transform = Transform3D(-1.1, 0, -9.61651e-08, 0, 1.1, 0, 9.61651e-08, 0, -1.1, 33.4457, 1.3, 14.0298)
+color = Color(0, 0, 0, 1)
+
+[node name="car16" parent="CarCollection2" instance=ExtResource("3_6ocxe")]
+transform = Transform3D(0.019, 0, 0, 0, 0.019, 0, 0, 0, 0.019, 46.2031, 0.6, -1.65488)
+color = Color(0.211765, 0.501961, 0.796078, 1)
+
+[node name="car17" parent="CarCollection2" instance=ExtResource("5_03uub")]
+transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 45.7351, 1.3, -5.08823)
+color = Color(0.764706, 0.705882, 0, 1)
+
+[node name="car18" parent="CarCollection2" instance=ExtResource("4_0gknh")]
+transform = Transform3D(-2.62268e-10, 0, 0.006, 0, 0.006, 0, -0.006, 0, -2.62268e-10, 36.7739, 0.009, -2.6698)
+body_color = Color(0.0705882, 0.615686, 0.298039, 1)
+stripe_color = Color(0, 0, 0, 1)
+
+[node name="car19" parent="CarCollection2" instance=ExtResource("3_6ocxe")]
+transform = Transform3D(-0.019, 0, -1.66103e-09, 0, 0.019, 0, 1.66103e-09, 0, -0.019, 20.9717, 0.6, -1.85852)
+color = Color(0.898039, 0.137255, 0.0588235, 1)
+
+[node name="car20" parent="CarCollection2" instance=ExtResource("5_03uub")]
+transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 21.4029, 1.3, -12.0346)
+color = Color(0.764706, 0.705882, 0, 1)
+
+[node name="car21" parent="CarCollection2" instance=ExtResource("3_6ocxe")]
+transform = Transform3D(-0.019, 0, -1.66103e-09, 0, 0.019, 0, 1.66103e-09, 0, -0.019, 30.2985, 0.6, 3.87649)
 color = Color(0.898039, 0.137255, 0.0588235, 1)

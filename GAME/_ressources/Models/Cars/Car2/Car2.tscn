@@ -297,7 +297,6 @@ shadow_mesh = SubResource("ArrayMesh_rpcwd")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mcr8"]
 resource_local_to_scene = true
-albedo_color = Color(0, 1, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmet1"]
 resource_name = "Material.028"

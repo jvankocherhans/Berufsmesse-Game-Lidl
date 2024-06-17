@@ -1,12 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8tdndss52582"]
+[gd_scene format=3 uid="uid://c8tdndss52582"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_peype"]
-font_size = 100
-
-[node name="l2" type="Node2D"]
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Level 2"
-label_settings = SubResource("LabelSettings_peype")
+[node name="l4" type="Node2D"]

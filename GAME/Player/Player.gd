@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 class_name Player
 
-@export var speed = 2.0
+@export var speed = 10.0
 @export var gravity = 70
 
 @onready var pivot = $Armature
@@ -35,8 +35,8 @@ func _physics_process(delta):
 
 func get_input_vector():
 	var input_vector = Vector3.ZERO
-	input_vector.x = Input.get_action_strength("back") -  Input.get_action_strength("forward") 
-	input_vector.z = Input.get_action_strength("left") -  Input.get_action_strength("right") 
+	input_vector.x = Input.get_action_strength("right") -  Input.get_action_strength("left") 
+	input_vector.z = Input.get_action_strength("back") -  Input.get_action_strength("forward") 
 	return input_vector.normalized()
 	
 func apply_movement(input_vector):

@@ -1,0 +1,274 @@
+[gd_scene load_steps=20 format=3 uid="uid://dal8ir66it7wk"]
+
+[ext_resource type="PackedScene" uid="uid://ccmxeqhq7dtm2" path="res://Player/Female/Female.glb" id="2_pesan"]
+[ext_resource type="PackedScene" uid="uid://bdq0kvcwupkbc" path="res://_tmp/O&G_Regal.glb" id="3_hk0if"]
+[ext_resource type="PackedScene" uid="uid://dqynpv8qt7244" path="res://Player/Male/Charakter2_lowpoly M animation.glb" id="4_glv4e"]
+[ext_resource type="PackedScene" uid="uid://dlpc0d1sqghg" path="res://Infrastructure/Store/StoreComponnets/GlassDoors.tscn" id="5_ep8as"]
+[ext_resource type="PackedScene" uid="uid://clijkg0a4vvph" path="res://Infrastructure/Store/StoreComponnets/LidlLogoShield.tscn" id="6_cv3mp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aalhi"]
+albedo_color = Color(0.898039, 0, 0.901961, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l8kt8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gedym"]
+albedo_color = Color(0, 0.407843, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fh78l"]
+albedo_color = Color(1, 0.0705882, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eby3x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gapcp"]
+albedo_color = Color(0, 0.682353, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5d6e"]
+albedo_color = Color(0.00784314, 0.772549, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmc2u"]
+albedo_color = Color(0.94902, 0.811765, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fi561"]
+albedo_color = Color(0.47451, 0.298039, 0.447059, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8i1mg"]
+albedo_color = Color(0.345098, 0.14902, 0.0431373, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qxrs"]
+albedo_color = Color(0.956863, 0, 0.180392, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6ajr"]
+albedo_color = Color(0.282353, 0.454902, 0.505882, 1)
+metallic = 0.43
+metallic_specular = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nfv4d"]
+albedo_color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nifw3"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Store" type="Node3D"]
+
+[node name="Female" parent="." instance=ExtResource("2_pesan")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 16.7122, 0, 19.4277)
+
+[node name="TEST" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(2, 0, 0, 0, 2.5, 0, 0, 0, 8, 12.2785, 1.20094, 3.92621)
+material_override = SubResource("StandardMaterial3D_aalhi")
+mesh = SubResource("BoxMesh_l8kt8")
+
+[node name="o&g" type="Node3D" parent="TEST"]
+
+[node name="O&G_Regal" parent="TEST/o&g" instance=ExtResource("3_hk0if")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.16751, 0, 6.8682)
+
+[node name="O&G_Regal2" parent="TEST/o&g" instance=ExtResource("3_hk0if")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.16751, 0, 4.90534)
+
+[node name="O&G_Regal3" parent="TEST/o&g" instance=ExtResource("3_hk0if")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.16751, 0, 2.93426)
+
+[node name="O&G_Regal4" parent="TEST/o&g" instance=ExtResource("3_hk0if")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.16751, 0, 0.955628)
+
+[node name="O&G_Regal5" parent="TEST/o&g" instance=ExtResource("3_hk0if")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.22238, 0, 6.8682)
+
+[node name="O&G_Regal6" parent="TEST/o&g" instance=ExtResource("3_hk0if")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.22238, 0, 4.90534)
+
+[node name="O&G_Regal7" parent="TEST/o&g" instance=ExtResource("3_hk0if")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.22238, 0, 2.93426)
+
+[node name="O&G_Regal8" parent="TEST/o&g" instance=ExtResource("3_hk0if")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.22238, 0, 0.955628)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(2, 0, 0, 0, 2.5, 0, 0, 0, 12, 12.2785, 1.20094, -12.4491)
+material_override = SubResource("StandardMaterial3D_gedym")
+mesh = SubResource("BoxMesh_l8kt8")
+
+[node name="BAKEOFF" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, 12.4522, 0.0479398, -3.13547)
+material_override = SubResource("StandardMaterial3D_fh78l")
+mesh = SubResource("PlaneMesh_eby3x")
+
+[node name="BAKEOFF2" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 3, -11.8815, 0.0479398, -3.13547)
+material_override = SubResource("StandardMaterial3D_fh78l")
+mesh = SubResource("PlaneMesh_eby3x")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(2, 0, 0, 0, 2.5, 0, 0, 0, 8, -11.3547, 1.20094, 3.92621)
+material_override = SubResource("StandardMaterial3D_gapcp")
+mesh = SubResource("BoxMesh_l8kt8")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(2, 0, 0, 0, 2.5, 0, 0, 0, 14, -11.3547, 1.20094, -13.9988)
+material_override = SubResource("StandardMaterial3D_o5d6e")
+mesh = SubResource("BoxMesh_l8kt8")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(-8.74228e-08, 0, 8, 0, 2.5, 0, -2, 0, -3.49691e-07, -8.30121, 1.20094, -20.0508)
+material_override = SubResource("StandardMaterial3D_o5d6e")
+mesh = SubResource("BoxMesh_l8kt8")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(-8.74228e-08, 0, 15, 0, 2.5, 0, -2, 0, -6.55671e-07, 3.76206, 1.20094, -20.0122)
+material_override = SubResource("StandardMaterial3D_wmc2u")
+mesh = SubResource("BoxMesh_l8kt8")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 8, -3.38307, 0.471259, 3.92621)
+material_override = SubResource("StandardMaterial3D_fi561")
+mesh = SubResource("BoxMesh_l8kt8")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 8, -3.38307, 0.471259, -10.7787)
+material_override = SubResource("StandardMaterial3D_8i1mg")
+mesh = SubResource("BoxMesh_l8kt8")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="TEST"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 8, 3.61706, 0.471259, -10.7787)
+material_override = SubResource("StandardMaterial3D_7qxrs")
+mesh = SubResource("BoxMesh_l8kt8")
+
+[node name="Charakter2_lowpoly M animation" parent="." instance=ExtResource("4_glv4e")]
+transform = Transform3D(-0.393926, 0, 0.919142, 0, 1, 0, -0.919142, 0, -0.393926, 16.5034, -0.00774407, 23.7364)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.74902, 0)
+material_override = SubResource("StandardMaterial3D_m6ajr")
+transparency = 0.25
+use_collision = true
+
+[node name="Base" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.33835, 0)
+use_collision = true
+size = Vector3(30, 10.8942, 50)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05511, 0)
+operation = 2
+size = Vector3(29, 15, 49)
+
+[node name="DoorCutOut" type="CSGBox3D" parent="CSGCombiner3D/Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7864, -4.0141, 21.2405)
+operation = 2
+size = Vector3(0.85, 2.771, 4.5)
+
+[node name="PillarCollectionFront" type="Node3D" parent="CSGCombiner3D/Base"]
+
+[node name="Pillar1" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 23.5526)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar2" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 18.927)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar3" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 14.9797)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar4" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 10.3542)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar5" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 6.10664)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar6" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 1.48112)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar7" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, -2.88976)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar8" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, -7.51529)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar9" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, -11.4626)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar10" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, -16.0881)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar11" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, -20.3357)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar12" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, -24.9612)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="PillarCollectionLeft" type="Node3D" parent="CSGCombiner3D/Base"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.3204, 0, 40.0594)
+
+[node name="Pillar1" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 23.5526)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar2" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 18.927)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar3" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 14.9797)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar4" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 10.3542)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar5" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 6.10664)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar6" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, 1.48112)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Pillar7" type="CSGBox3D" parent="CSGCombiner3D/Base/PillarCollectionLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0383, 0, -2.88976)
+material_override = SubResource("StandardMaterial3D_nfv4d")
+size = Vector3(0.1, 11, 0.1)
+
+[node name="Node3D" type="Node3D" parent="CSGCombiner3D"]
+
+[node name="Roof" type="CSGBox3D" parent="CSGCombiner3D/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35744, 0)
+material_override = SubResource("StandardMaterial3D_nifw3")
+size = Vector3(31.7822, 1.63256, 51.0097)
+
+[node name="GlassDoors" parent="." instance=ExtResource("5_ep8as")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5949, 1.35599, 21.251)
+
+[node name="LidlLogoShield" parent="." instance=ExtResource("6_cv3mp")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 15.2342, 6.41389, 21.2649)

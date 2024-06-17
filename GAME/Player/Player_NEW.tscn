@@ -1772,7 +1772,7 @@ bind/64/pose = Transform3D(-99.589, 8.81604, -2.16464, -2.22263, -0.560353, 99.9
 albedo_color = Color(0.164706, 0.0705882, 1, 1)
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
 script = ExtResource("1_dejs1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -1786,7 +1786,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.266372, 0)
 shape = SubResource("CapsuleShape3D_o510n")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-2.46869e-08, -0.26769, 0.564772, -1.17011e-08, 0.564772, 0.26769, -0.625, -3.10862e-14, -2.73196e-08, 1.59386, 1.111, 0)
+transform = Transform3D(0.285714, 0, 0, 0, 0.276967, 0.0701555, 0, -0.0701555, 0.276967, -0.120426, 1.09475, 1.14286)
 fov = 46.1019
 
 [node name="Armature" type="Node3D" parent="."]
