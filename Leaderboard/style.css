@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('IMG_5507_bearb_bearb_WEB.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-left: 300px;/* Nach links ausgerichtet */
+    align-items: center;
+    height: 100vh;
+}
+
+.leaderboard {
+    background-color: rgba(0, 80, 170, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.3);
+    animation: slide-up 0.5s ease-in-out;
+    width: 300px;
+    text-align: center;
+    font-family: pacman;
+}
+
+@font-face {
+    font-family: 'pacman';
+    src: url('joystix\ monospace.otf');
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+.all-time, .today {
+    list-style-type: none;
+    padding: 0;
+}
+
+.all-time li, .today li {
+    margin-bottom: 10px;
+    position: relative;
+    transition: background-color 1s ease-in-out;
+}
+
+.all-time li:hover, .today li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.all-time li:nth-child(odd), .today li:nth-child(odd) {
+    padding: 5px;
+}
+
+.all-time li:nth-child(even), .today li:nth-child(even) {
+    padding: 5px;
+}
+
+.all-time li:first-child, .today li:first-child {
+    font-weight: bold;
+    background-color: #C9A037; /* Gold */
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.all-time li:nth-child(2), .today li:nth-child(2) {
+    font-weight: bold;
+    background-color: #c0c0c0; /* Silber */
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 10px;
+    
+}
+
+.all-time li:nth-child(3), .today li:nth-child(3) {
+    background-color: #c98566; /* Bronze */
+    font-size: 18px; /* Größere Schrift für Top 3 */
+    padding: 8px; /* Mehr Padding für Top 3 */
+    border-radius: 5px; /* Abgerundete Ecken für Top 3 */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Schatten für Top 3 */
+    font-weight: bold;
+}
+
+.all-time li:nth-child(n+4) {
+    background-color: #0050AA; /* Blau */
+}
+
+.all-time li:nth-child(5) {
+    background-color: #FFF000; /* Gelb */
+    
+}
+
+.all-time li:nth-child(6) {
+    background-color: #E60A14; /* Rot */
+}
+
+.all-time li:nth-child(7) {
+    background-color: #0050AA; /* Blau */
+}
+
+.all-time li:nth-child(8) {
+    background-color: #FFF000; /* Gelb */
+}
+
+.all-time li:nth-child(9) {
+    background-color: #E60A14; /* Rot */
+}
+
+.all-time li:nth-child(10) {
+    background-color: #0050AA; /* Blau */
+}
