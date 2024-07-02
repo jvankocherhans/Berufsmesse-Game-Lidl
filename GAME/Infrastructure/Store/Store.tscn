@@ -1,8 +1,8 @@
 [gd_scene load_steps=20 format=3 uid="uid://dal8ir66it7wk"]
 
-[ext_resource type="PackedScene" uid="uid://ccmxeqhq7dtm2" path="res://Player/Female/Female.glb" id="2_pesan"]
+[ext_resource type="PackedScene" path="res://Player/Female/Female.glb" id="2_pesan"]
 [ext_resource type="PackedScene" uid="uid://bdq0kvcwupkbc" path="res://_tmp/O&G_Regal.glb" id="3_hk0if"]
-[ext_resource type="PackedScene" uid="uid://dqynpv8qt7244" path="res://Player/Male/Charakter2_lowpoly M animation.glb" id="4_glv4e"]
+[ext_resource type="PackedScene" uid="uid://dqynpv8qt7244" path="res://Player/Male/res_male.glb" id="4_glv4e"]
 [ext_resource type="PackedScene" uid="uid://dlpc0d1sqghg" path="res://Infrastructure/Store/StoreComponnets/GlassDoors.tscn" id="5_ep8as"]
 [ext_resource type="PackedScene" uid="uid://clijkg0a4vvph" path="res://Infrastructure/Store/StoreComponnets/LidlLogoShield.tscn" id="6_cv3mp"]
 

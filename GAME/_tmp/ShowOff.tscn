@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dga74mskd0pdu"]
+[gd_scene load_steps=7 format=3 uid="uid://dga74mskd0pdu"]
 
 [ext_resource type="PackedScene" uid="uid://bm82xv1vf5k5o" path="res://Infrastructure/Place/Place.tscn" id="1_7s45s"]
 [ext_resource type="PackedScene" uid="uid://dal8ir66it7wk" path="res://Infrastructure/Store/Store.tscn" id="2_x6uf4"]
+[ext_resource type="PackedScene" uid="uid://3b2tguesr0bs" path="res://Player/Player_NEW.tscn" id="3_gjitw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qmnx8"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -30,5 +31,5 @@ environment = SubResource("Environment_1xtxg")
 [node name="Store" parent="." instance=ExtResource("2_x6uf4")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.3852, 0, -31.6591)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.961271, 0, 0.275604, 0, 1, 0, -0.275604, 0, -0.961271, 13.4498, 5, -30.784)
+[node name="Player" parent="." instance=ExtResource("3_gjitw")]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -23.1451, 4.76837e-07, 8.63982)
