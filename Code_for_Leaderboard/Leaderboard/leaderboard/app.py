@@ -1,6 +1,11 @@
-from . import create_app
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
-app = create_app()
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/dbname'
+db = SQLAlchemy(app)
+
+from routes import *
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,9 +1,8 @@
-from flask import request, jsonify, render_template
-from . import db
-from .models import PlayerScore
-from . import create_app
-
-app = create_app()
+from flask import request, jsonify, render_template, Response
+from app import app, db
+from models import PlayerScore
+import io
+import csv
 
 @app.route('/')
 def index():
@@ -36,3 +35,14 @@ def receive_player_score():
         db.session.commit()
 
     return 'Score received', 200
+
+@app.route('/exportTop3', methods=['GET'])
+def export_top3():
+    top3 = PlayerScore.query.order_by(PlayerScore.score.desc()).limit(3).all()
+    si = io.StringIO()
+    cw = csv.writer(si)
+    cw.writerow(['userID', 'score'])
+    for player in top3:
+        cw.writerow([player.userID, player.score])
+    output = si.getvalue()
+    return Response(output, mimetype="text/csv", headers={"Content-disposition": "attachment; filename=top3.csv"})
