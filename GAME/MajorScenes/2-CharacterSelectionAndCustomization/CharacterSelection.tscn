@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://c8tdndss52582"]
+
+[ext_resource type="Script" path="res://MajorScenes/2-CharacterSelectionAndCustomization/CharacterSelection.gd" id="1_6k8lm"]
+[ext_resource type="PackedScene" uid="uid://b44kr4vq0a7ns" path="res://Player/Female/PlayerFemale.tscn" id="1_scnd0"]
+[ext_resource type="PackedScene" uid="uid://dddoseo0ssfin" path="res://Player/Male/PlayerMale.tscn" id="2_fvlk7"]
+[ext_resource type="FontFile" uid="uid://cdlbcbhg5to6" path="res://_ressources/Fonts/LidlFontPro-Bold.ttf" id="3_di1se"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uacjj"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_k5hbj"]
+sky_material = SubResource("ProceduralSkyMaterial_uacjj")
+
+[sub_resource type="Environment" id="Environment_gvq8u"]
+background_mode = 2
+sky = SubResource("Sky_k5hbj")
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0699
+volumetric_fog_albedo = Color(0, 0.313726, 0.666667, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ltmwb"]
+albedo_color = Color(1, 0.941176, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_q5lll"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8ipug"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="CharacterSelection" type="Node3D"]
+script = ExtResource("1_6k8lm")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.3749, 1.31742, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-4.03928e-08, -0.3822, 0.92408, -1.67065e-08, 0.92408, 0.3822, -1, 0, -4.37114e-08, 9.44466, 4.69717, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gvq8u")
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="PlayerFemale" parent="Characters" instance=ExtResource("1_scnd0")]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0, 0, 1)
+
+[node name="PlayerMale" parent="Characters" instance=ExtResource("2_fvlk7")]
+transform = Transform3D(0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, 0, 0, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_ltmwb")
+mesh = SubResource("PlaneMesh_q5lll")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8ipug")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 150.0
+offset_bottom = 270.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_di1se")
+theme_override_font_sizes/font_size = 100
+text = "Wähle deinen Charakter (Drücke X oder B)"
+horizontal_alignment = 1

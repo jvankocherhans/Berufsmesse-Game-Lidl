@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0hklq5p2oukr"]
+
+[ext_resource type="FontFile" uid="uid://ufixl0nbut0n" path="res://_ressources/Fonts/LidlFontPro-Regular.ttf" id="1_7edid"]
+[ext_resource type="Script" path="res://MajorScenes/Disclaimer.gd" id="1_lqnas"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_awuw8"]
+bg_color = Color(0, 0.313726, 0.666667, 1)
+
+[node name="Disclaimer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lqnas")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_awuw8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_7edid")
+theme_override_font_sizes/font_size = 35
+text = "Die aktuelle Version entspricht nicht dem neuesten Stand des Spiels. 
+Aufgrund von Performanceproblemen haben wir vorübergehend eine ältere Version veröffentlicht. 
+Wir arbeiten mit Hochdruck daran, die notwendigen Anpassungen vorzunehmen, damit die neueste Version bald spielbar ist.
+
+Wir danken euch für euer Verständnis.
+
+Mit freundlichen Grüßen
+Das Berufsmessen-Game Projektteam"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

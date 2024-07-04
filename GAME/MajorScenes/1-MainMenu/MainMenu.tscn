@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://cn46wwxl35fst"]
+
+[ext_resource type="Script" path="res://MajorScenes/1-MainMenu/MainMenu.gd" id="1_qkobb"]
+[ext_resource type="FontFile" uid="uid://ufixl0nbut0n" path="res://_ressources/Fonts/LidlFontPro-Regular.ttf" id="2_ryqdw"]
+[ext_resource type="FontFile" uid="uid://cnxurslfwpn07" path="res://_ressources/Fonts/LidlFontCondPro-Bold.ttf" id="3_rbjoh"]
+[ext_resource type="PackedScene" uid="uid://dnjxlr0v4awuy" path="res://MajorScenes/1-MainMenu/MENU.tscn" id="4_ajkon"]
+[ext_resource type="AudioStream" uid="uid://bxycr2mfbdf8v" path="res://_ressources/Songs/BMG - INTRO.wav" id="5_hi0n5"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qkobb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -101.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Singleplayer" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ryqdw")
+theme_override_font_sizes/font_size = 60
+text = "Einzelspieler"
+
+[node name="Multiplayer" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ryqdw")
+theme_override_font_sizes/font_size = 60
+text = "Mehrspieler"
+
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ryqdw")
+theme_override_font_sizes/font_size = 60
+text = "Credits"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.5
+offset_top = -11.5
+offset_right = 70.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rbjoh")
+theme_override_font_sizes/font_size = 130
+text = "My Lidl Adventure"
+
+[node name="ShowOff" parent="." instance=ExtResource("4_ajkon")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.679467, 0, -0.733706, 0, 1, 0, 0.733706, 0, 0.679467, -1.28995, 5.16487, -3.22805)
+fov = 97.4561
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hi0n5")
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Singleplayer" to="." method="_on_singleplayer_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c186hkdpg0bh7"]
+
+[ext_resource type="PackedScene" uid="uid://c8rsc626jku3v" path="res://Assets/Interiors/Puddle/Puddle.glb" id="1_wqxnm"]
+[ext_resource type="Script" path="res://Player/Female/puddle.gd" id="2_0j43m"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qjm7n"]
+height = 0.0598708
+radius = 0.418098
+
+[node name="Puddle" instance=ExtResource("1_wqxnm")]
+script = ExtResource("2_0j43m")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+shape = SubResource("CylinderShape3D_qjm7n")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

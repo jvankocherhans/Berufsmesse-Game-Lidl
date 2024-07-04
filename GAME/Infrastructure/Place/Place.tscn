@@ -1,13 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm82xv1vf5k5o"]
+[gd_scene load_steps=6 format=3 uid="uid://bm82xv1vf5k5o"]
 
 [ext_resource type="PackedScene" uid="uid://by7pn7ha5w0x8" path="res://_ressources/Models/Parking/front_parking.tscn" id="2_l5wc6"]
 [ext_resource type="PackedScene" uid="uid://crdfs105j55lt" path="res://_ressources/Models/Cars/Car1/car1.tscn" id="3_6ocxe"]
 [ext_resource type="PackedScene" uid="uid://cnik3g8vtktmv" path="res://_ressources/Models/Cars/Car2/Car2.tscn" id="4_0gknh"]
 [ext_resource type="PackedScene" uid="uid://cak7yw0ub3lbi" path="res://_ressources/Models/Cars/Car3/Car3.tscn" id="5_03uub"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7yq63"]
+albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
+
 [node name="Place" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_7yq63")
 use_collision = true
 size = Vector3(100, 0, 150)
 

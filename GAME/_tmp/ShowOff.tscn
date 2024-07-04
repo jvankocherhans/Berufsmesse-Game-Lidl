@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dga74mskd0pdu"]
+[gd_scene load_steps=11 format=3 uid="uid://dga74mskd0pdu"]
 
 [ext_resource type="PackedScene" uid="uid://bm82xv1vf5k5o" path="res://Infrastructure/Place/Place.tscn" id="1_7s45s"]
+[ext_resource type="Script" path="res://_tmp/ShowOff.gd" id="1_erm3l"]
 [ext_resource type="PackedScene" uid="uid://dal8ir66it7wk" path="res://Infrastructure/Store/Store.tscn" id="2_x6uf4"]
-[ext_resource type="PackedScene" uid="uid://3b2tguesr0bs" path="res://Player/Player_NEW.tscn" id="3_gjitw"]
+[ext_resource type="FontFile" uid="uid://ufixl0nbut0n" path="res://_ressources/Fonts/LidlFontPro-Regular.ttf" id="4_vt6di"]
+[ext_resource type="AudioStream" uid="uid://dpqpulskxupx4" path="res://_ressources/Songs/BMG - MAIN.wav" id="5_d2ws6"]
+[ext_resource type="PackedScene" uid="uid://c186hkdpg0bh7" path="res://Player/Female/puddle.tscn" id="6_c0uqr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qmnx8"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -13,14 +16,23 @@ sky_material = SubResource("ProceduralSkyMaterial_qmnx8")
 
 [sub_resource type="Environment" id="Environment_1xtxg"]
 background_mode = 2
+background_energy_multiplier = 4.2
 sky = SubResource("Sky_o1aai")
 tonemap_mode = 2
+sdfgi_enabled = true
 glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0564
+volumetric_fog_albedo = Color(0.0205693, 0.569475, 0.737847, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ynhda"]
+size = Vector3(1, 6.02722, 62.6253)
 
 [node name="ShowOff" type="Node3D"]
+script = ExtResource("1_erm3l")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.437438, 0.810496, -0.389543, -0.605104, 0.0551436, 0.794235, 0.665205, 0.583143, 0.466312, -31.0031, 13.408, -4.33923)
+transform = Transform3D(-0.403379, 0.838838, -0.365563, -0.605104, 0.0551438, 0.794235, 0.686393, 0.541581, 0.48534, -31.0031, 13.408, 37.18)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -31,5 +43,86 @@ environment = SubResource("Environment_1xtxg")
 [node name="Store" parent="." instance=ExtResource("2_x6uf4")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.3852, 0, -31.6591)
 
-[node name="Player" parent="." instance=ExtResource("3_gjitw")]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -23.1451, 4.76837e-07, 8.63982)
+[node name="PlayerPosition" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.03959, 0.0296031, -23.6167)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("4_vt6di")
+theme_override_font_sizes/font_size = 50
+text = "Score: 0"
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Wische alle 10 Pfützen in der Filiale auf indem du die A-Taste drückst.
+Drücke A um zu beginnen"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_d2ws6")
+autoplay = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -28.7453)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.85006, 2.51361, -17.7492)
+shape = SubResource("BoxShape3D_ynhda")
+
+[node name="puddles" type="Node" parent="."]
+
+[node name="Puddle" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.7677, 0.0379286, -27.2976)
+
+[node name="Puddle2" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5932, 0.0379286, -23.5957)
+
+[node name="Puddle3" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5932, 0.0379286, -30.8463)
+
+[node name="Puddle4" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2188, 0.0379286, -25.3816)
+
+[node name="Puddle5" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2188, 0.0379286, -36.874)
+
+[node name="Puddle6" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0328, 0.0379286, -36.874)
+
+[node name="Puddle7" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9453, 0.0379286, -31.5266)
+
+[node name="Puddle8" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4086, 0.0379286, -38.2592)
+
+[node name="Puddle9" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7624, 0.0379286, -38.2592)
+
+[node name="Puddle10" parent="puddles" instance=ExtResource("6_c0uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7624, 0.0379286, -31.414)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
